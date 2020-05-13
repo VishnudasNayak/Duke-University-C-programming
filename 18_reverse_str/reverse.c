@@ -3,6 +3,20 @@
 #include <string.h>
 
 void reverse(char * str) {
+  int n;
+  if(str ==NULL)
+    exit(EXIT_FAILURE);
+  for(n=0;*(str+n)!='\0';n++);
+  char *a, *b, temp;
+  a = str;
+  b = str+n-1;
+  for(int i=0;i<n/2; i++){
+    temp = *a;
+    *a = *b;
+    *b = temp;
+    a++;
+    b--;
+  }
   //WRITE ME!
 }
 
